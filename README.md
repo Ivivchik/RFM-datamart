@@ -31,10 +31,11 @@ monetary_value|smallint|check (monetary_value is not null and monetary_value bet
 Наименование|Описание
 ---|---
 analysis.Orders|Представление таблицы production.Orders
+analysis.OrderStatusLog|Представление таблицы production.OrderStatusLog
 
-## Описание источников
+## Описание источников:
 
-**analysis.Orders**
+- ## **analysis.Orders**
 
 Атрибут|Тип|Ограниечение|Описание
 ---|---|---|---
@@ -44,4 +45,10 @@ order_ts|timestamp|-|Дата и время получение заказом д
 status|integer|-|Статус заказа
 user_id|integer|-|Идентификатор пользователя
 
+ - ## **analysis.OrderStatusLog**
 
+Атрибут|Тип|Ограниечение|Описание
+---|---|---|---
+order_id|integer|unique key|Идентификатор заказа
+status_id|integer|unique key|Идентификатор статуса
+dttm|timestamp|-|Дата и время получение заказом данного статуса
