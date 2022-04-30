@@ -11,9 +11,9 @@
 Атрибут|Тип|Ограничение|Описание
 ---|---|---|---
 user_id|integer|primary key|Идентификатор пользователя 
-recency|smallint|check (recency between 1 and 5)|Фактор давности заказа. Определяется по последнему заказу. Принимает значения от 1(нет закзов либо заказы были сделаны давно) до 5(заказы сделаны относительно недавно)
-frequency|smallint|check (frequency between 1 and 5)|Фактор количество заказов. Принимает значения от 1(наименьшее) до 5(наибольшее)
-monetary_value|smallint|check (monetary_value between 1 and 5)|Фактор потраченной суммы на заказы. Принимает значения от 1(наименьшее) до 5(наибольшее)
+recency|smallint|check (recency is not null and recency between 1 and 5)|Фактор давности заказа. Определяется по последнему заказу. Принимает значения от 1(нет закзов либо заказы были сделаны давно) до 5(заказы сделаны относительно недавно)
+frequency|smallint|check (frequency is not null and frequency  between 1 and 5)|Фактор количество заказов. Принимает значения от 1(наименьшее) до 5(наибольшее)
+monetary_value|smallint|check (monetary_value is not null and monetary_value between 1 and 5)|Фактор потраченной суммы на заказы. Принимает значения от 1(наименьшее) до 5(наибольшее)
 
 ## Параметры хранения
 
